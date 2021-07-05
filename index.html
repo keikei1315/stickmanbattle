@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="battlegame.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+
+  <div id="loadUp"></div>
+  <div id="percent"></div>
+  <div id="loadDown"></div>
+
+    
+
+  
+
+  <button id="startButton">ゲームを始める</button>
+
+  <div id="backScreen"><img src="picture/stickmanBattle.jpg" alt=""></div>
+
+  </header>
+  <main>
+    <div id='winLose1'>
+      <p id='win1'>WIN</p>
+      <p id="lose1">LOSE</p>
+    </div>
+    <div id='winLose2'>
+      <p id='win2'>WIN</p>
+      <p id="lose2">LOSE</p>
+    </div>
+<div id="gameMask">
+  <button id='stickmanBattleRuleButton'>ルール説明</button>
+  <div id='stickmanBattleRule'><img src="picture/STICKMAN BATTLE RULES.jpg" alt=""></div>
+<div class="battlescreen" id="battlescreen">
+  <div class="player1" id="player1">
+    <div class="characterSelect" id="characterSelect">
+      <button id="Soldier" class="Soldier">戦士:q</button>
+      <button id="Ranger" class="Ranger">弓使い:w</button>
+      <button id="Wizard" class="Wizard">魔導士:e</button>
+    </div>
+    <div class="player1HpGauge" id="player1HpGauge"><div id="hpGauge1"></div></div>
+    <div class="player1Picture" id="player1Picture"></div>
+    <div class="button">
+      <button id="attack" class="attack">攻撃:a</button>
+      <button id="counter" class="counter">反撃:s</button>
+      <button id="magic" class="magic">魔法:z</button>
+      <button id="kill" class="kill">必殺:x</button>
+    </div>
+  </div>
+  <div class="player2" id="player2">
+    <div class="characterSelect2" id="characterSelect2">
+      <button id="Soldier2" class="Soldier2">戦士:t</button>
+      <button id="Ranger2" class="Ranger2">弓使い:y</button>
+      <button id="Wizard2" class="Wizard2">魔導士:u</button>
+    </div>
+    <div class="player2HpGauge" id="player2HpGauge"><div id="hpGauge2"></div></div>
+    <div class="player2Picture" id="player2Picture">
+    </div>
+    <div class="button">
+      <button id="attack2" class="attack2">攻撃:o</button>
+      <button id="counter2" class="counter2">反撃:p</button>
+      <button id="magic2" class="magic2">魔法:k</button>
+      <button id="kill2" class="kill2">必殺:l</button>
+    </div>
+  </div>
+  <button id="senntou" class="senntou">戦闘開始:f</button>
+</div>
+<div id='gameLog'>
+    
+</div>
+</div>
+
+
+  </main>
+<footer></footer>
+  <script  
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+  <script src="battlegame.js"></script>
+</body>
+</html>

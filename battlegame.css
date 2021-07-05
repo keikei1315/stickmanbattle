@@ -1,0 +1,371 @@
+header{
+  position: relative;
+}
+main{
+  max-width: 100vw;
+  max-height: 100vh;
+  margin:0 0 auto;
+  position: relative;
+}
+#stickmanBattleRuleButton{
+  width: 10%;
+  height: 10%;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%,0%);
+  background: linear-gradient(rgb(55, 100, 28), rgb(28, 128, 3));
+  z-index: 20;
+  color: white;
+}
+#stickmanBattleRuleButton.show{
+  opacity: .5;
+}
+#stickmanBattleRule{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0%);
+  opacity: 0;
+  display: none;
+  z-index: 15;
+}
+#stickmanBattleRule.show{
+  display: block;
+  opacity: 1;
+}
+#stickmanBattleRule img{
+  width: 100%;
+  height: 100%;
+}
+#winLose1{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+}
+#win1{
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  transform: translate(-50%,-50%);
+  font-size: 3em;
+  background: linear-gradient(rgb(252, 241, 85), rgb(250, 213, 3));
+  opacity: 1;
+  transition: 1s;
+  border-radius: 5px;
+  z-index: 5;
+  opacity: 0;
+  margin: 0;
+}
+#lose1{
+  position: absolute;
+  bottom: 0%;
+  right: 25%;
+  transform: translate(50%,-50%);
+  font-size: 3em;
+  background: linear-gradient(rgb(85, 163, 252), rgb(3, 7, 250));
+  opacity: 1;
+  transition: 1s;
+  border-radius: 5px;
+  z-index: 5;
+  opacity: 0;
+  margin: 0;
+}
+
+#winLose2{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+}
+#win2{
+  position: absolute;
+  bottom: 0%;
+  right: 25%;
+  transform: translate(50%,-50%);
+  font-size: 3em;
+  background: linear-gradient(rgb(252, 241, 85), rgb(250, 213, 3));
+  opacity: 0;
+  transition: 1s;
+  border-radius: 5px;
+  z-index: 3;
+  margin: 0;
+}
+#lose2{
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  transform: translate(-50%,-50%);
+  font-size: 3em;
+  background: linear-gradient(rgb(85, 163, 252), rgb(3, 7, 250));
+  opacity: 0;
+  transition: 1s;
+  border-radius: 5px;
+  z-index: 3;
+  margin: 0;
+}
+
+
+#loadScreen{
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(3, 0, 0);
+  width: 100%;
+  height: 100%; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left; */
+}
+#loadUp{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  transition: 2s;
+  z-index: 10;
+}
+#loadDown{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  transition: 2s;
+  z-index: 10;
+}
+#percent{
+  height: 3px;
+  width: 0%;
+  background-color: rgb(252, 248, 248);
+  position: fixed;
+  top: 50%;
+  z-index: 11;
+  opacity: 1;
+}
+#startButton{
+  position: fixed;
+  top: 80%;
+  left:50%;
+  width: 300px;
+  color: white;
+  font-weight: bold;
+  transform: translate(-50%,-50%);
+  padding: 30px;
+  background: linear-gradient(rgb(252, 132, 85), rgb(250, 61, 3));
+  border-radius: 20px;
+  z-index: 10;
+}
+#startButton.hidden{
+  display: none;
+  z-index: 0;
+}
+#backScreen{
+  position: fixed;
+  width: 100%;
+  height:100%;
+  margin: -8px;
+  z-index: 9;
+}
+#backScreen img{
+  width: 100%;
+  height: 100%;
+}
+#backScreen.hidden{
+  display: none;
+}
+
+#gameMask{
+  display: none;
+  opacity:0;
+  transition: .5s;
+}
+
+
+#battlescreen{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: black 3px solid;
+  width: 97vw;
+  height: 75vh;
+  margin: 5px auto;
+}
+
+
+
+#player1{
+width: 35%;
+margin-right:2.5%;
+}
+#characterSelect{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#characterSelect button{
+  z-index: 5;
+}
+#characterSelect.hidden{
+  visibility: hidden;
+}
+#player1HpGauge{
+  margin: 5%;
+  height: 7%;
+  width: 95%;
+  background-color: red;
+  border: black 2px solid;
+}
+#player1HpGauge div{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(231, 247, 15);
+  transition: .8s;
+  
+}
+#player1Picture{
+  margin: 5%;
+  height: 65%;
+  width: 95%;
+  border: black 3px solid;
+}
+#player1Picture img{
+  width: 100%;
+  height: 100%;
+}
+
+.button button{
+  color: white;
+}
+.attack{
+  background-color: red;
+}
+.counter{
+  background-color: blue;
+}
+.magic{
+  background-color: green;
+}
+.kill{
+  color: black;
+  background-color: yellow;
+}
+
+
+
+#player2{
+  width: 35%;
+  margin-right: 2.5%;
+}
+#characterSelect2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#characterSelect2 button{
+  z-index: 5;
+}
+#characterSelect2.hidden{
+  visibility: hidden;
+}
+#player2HpGauge{
+  margin: 5%;
+  height: 7%;
+  width: 95%;
+  background-color: red;
+  border: black 2px solid;
+}
+#player2HpGauge div{
+  height:100%;
+  width:100%;
+  background-color: rgb(231, 247, 15);
+  transition: .8s;
+}
+#player2Picture{
+  margin: 5%;
+  height: 65%;
+  width: 95%;
+  border: black 3px solid;
+}
+#player2Picture img{
+  width: 100%;
+  height: 100%;
+}
+.button{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2.5%;
+  z-index: 10;
+}
+.button button{
+  color: black;
+  font-weight: bold;
+}
+.attack2{
+  background-color: red;
+}
+.counter2{
+  background-color: blue;
+}
+.magic2{
+  background-color: green;
+}
+.kill2{
+
+  background-color: yellow;
+}
+#senntou{
+  width: 20%;
+  font-size: 2rem;
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding: 1%;
+  border-radius: 20px;
+  background-color: red;
+  z-index: 5;
+}
+
+#winLose{
+  position: relative;
+}
+#win{
+  position: absolute;
+  top: -100px;
+  left: 100px;
+}
+#win{
+  position: absolute;
+  top: -100px;
+  left: 100px;
+}
+#gameLog{
+  height: 20vh;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: gray;
+  overflow-y: scroll;
+}
+#gameLog p{
+  color: white;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width:890px){
+  #senntou{
+    font-size: 1.2rem;
+    
+  }
+}
